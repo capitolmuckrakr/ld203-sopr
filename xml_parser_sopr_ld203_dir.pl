@@ -1,9 +1,8 @@
 #!/usr/bin/perl -w
 
-
 use strict;
 
-my @date = split //,`today_yesterday.rb`;
+my @date = split //,`ruby ~/Desktop/scripts/ruby/today_yesterday.rb`;
 
 my $today = $date[6].$date[7];
 
@@ -25,6 +24,6 @@ my @files = glob "*.xml";
 
 foreach my $file (@files) {
     
-    system "perl D:/Code/Perl/xml_parser_sopr_ld203.pl $file >>$new_file";
+    system "perl ~/Desktop/scripts/perl/lobbyxml/xml_parser_sopr_ld203.pl $file >>$new_file";
     
 }
